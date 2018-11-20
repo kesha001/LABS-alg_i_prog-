@@ -50,7 +50,7 @@ int main()
     int k2 = 0;
     for (int i = 0; i<k; i++)
     {
-        if (vyraz[i] == zaryv[i])
+        if (vyraz[i] == zaryv[i] || vyraz[i] == (zaryv[i]+32) || (vyraz[i]+32) == zaryv[i] )
         {
             k2++;
         }
