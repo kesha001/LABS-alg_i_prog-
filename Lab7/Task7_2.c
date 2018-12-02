@@ -2,18 +2,14 @@
 
 int sum(int n, ...)
 {
-    int *ptr = &n;
-    int s = 0;
-    printf("%d", &n);
-    ptr++;
-    printf("%i \n", *ptr);
-    /*for( ;n>0; n--, ptr++)
-    {
 
-        printf("*ptr: %d \n s: %d \n" , *ptr, s);
+    int s = 0;
+
+    for(int *ptr = &n;n>0; n--)
+    {
+        ptr++;
         s+= *(ptr);
-        printf("*ptr: %d \n s: %d \n", *ptr, s);
-    }*/
+    }
     return s;
 }
 
