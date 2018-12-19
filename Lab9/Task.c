@@ -4,7 +4,6 @@
 void filesize(FILE *fp, char* filename);
 int main()
 {
-
     FILE *fout = fopen("F1","w");
     FILE *fin = fopen("F2","w");
     if(fopen("F1","w") == NULL ||fopen("F2","w") == NULL )
@@ -42,4 +41,14 @@ void filesize(FILE *fp, char* filename)
     fseek(fp, 0, SEEK_END);
     printf("%ld\n", ftell(fp));
     fclose(fp);
+}
+void readfile(FILE *fp,char* filename)
+{
+    char* k;
+    fp = fopen(filename, "r");
+    while(!feof(fp))
+    {
+        fread(&k, sizeof(char),1,fp);
+        printf("%s", k);
+    }
 }
